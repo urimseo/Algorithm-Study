@@ -26,3 +26,18 @@
 - [MOVE] : 프로젝트 파일 및 코드 이동
 - [RENAME] : 파일 이름 변경
 - [MERGE] : 다른 브랜치와의 충돌 해결 후 Merge
+
+
+
+## Fork
+
+1. pull request 
+
+   github에서 pull request 날리기
+
+2. ```bash
+   $ git fetch upstream
+   ```
+
+
+
