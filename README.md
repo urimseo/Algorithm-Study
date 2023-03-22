@@ -6,11 +6,20 @@
 
 
 
-
-
 ## 📍 Commit Message Convention
 
-- [ADD] : 문제 풀이 파일이나 부수적인 코드 추가
+#### 플랫폼 코드 작성법
+
+- [TIC] - 이것이 코딩 테스트다
+- [BOJ] - 백준
+- [PGS] - 프로그래머스
+- [LTC] - 리트코드
+- [CFS] - 코드포스
+- [SEA] - 삼성SW Expert Academy
+- [ETC] - 그외
+
+#### 기타 Convention
+
 - [MOD] : 코드(문법 오류 해결, 타입 변경, 이름 변경 ) 및 내부 파일 등의 수정
 - [DEL] : 쓸모없는 코드나 파일 삭제
 - [DOCS] : README 등의 문서 개정
