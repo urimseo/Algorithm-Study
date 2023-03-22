@@ -43,12 +43,30 @@ git push origin main
 
 #### Fork
 
+##### 받을 때 
+
+1. origin 내용 update
+   ```bash
+   git fetch upstream 
+   git merge upstream/main
+   ```
+
+2. fork repository에 origin push
+
+   ```bash
+   git push
+   ```
+
+   
+
+##### 올릴 때 
+
 1. pull request 
 
    github에서 pull request 날리기
 
 2. ```bash
-   $ git fetch upstream
+   git fetch upstream
    ```
 
 
