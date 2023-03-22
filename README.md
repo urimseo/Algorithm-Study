@@ -31,6 +31,18 @@
 
 ## Fork
 
+#### Origin
+
+1. push
+
+```bash
+git push origin main
+```
+
+
+
+#### Fork
+
 1. pull request 
 
    github에서 pull request 날리기
