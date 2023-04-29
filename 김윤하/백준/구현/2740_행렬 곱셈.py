@@ -17,7 +17,8 @@ for n in range(N):   # A의 행
         for m in range(M):  # B의 열
             C[n][k] += A[n][m]*B[m][k]
 
-print(C)
+for i in C:
+    print(*i)
 '''
 3 2
 1 2
