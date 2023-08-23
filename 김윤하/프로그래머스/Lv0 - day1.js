@@ -63,3 +63,11 @@ function 홀짝_구분하기() {
   var result = n % 2 === 0 ? `${n} is even` : `${n} is odd`;
   console.log(result);
 }
+
+function 문자열_겹쳐쓰기(my_string, overwrite_string, s) {
+  var arr = [...my_string];
+  // array.splice(start[, deleteCount[, item1[, item2[, ...]]]])
+  // 배열.splice(시작[, 삭제할 수(없으면 삭제하지 않고 삽입만 함[, 대체할 것)
+  arr.splice(s, overwrite_string.length, overwrite_string);
+  return arr.join("");
+}
