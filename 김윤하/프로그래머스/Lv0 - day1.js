@@ -21,3 +21,10 @@ function a와b출력하기() {
   const [a, b] = input;
   console.log(`a = ${a}\nb = ${b}`);
 }
+
+function 문자열반복해서출력하기() {
+  input = input.split(" ");
+  str = input[0];
+  n = Number(input[1]);
+  console.log(str.repeat(n));
+}
