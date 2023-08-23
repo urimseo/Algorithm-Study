@@ -37,3 +37,7 @@ function 대소문자_바꿔서_출력하기() {
   });
   console.log(newArr.join(""));
 }
+
+function 특수문자_출력하기() {
+  console.log("!@#$%^&*(\\'\"<>?:;");
+}
