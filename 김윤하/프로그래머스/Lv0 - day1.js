@@ -85,3 +85,10 @@ function 문자_리스트를_문자열로_변환하기(arr) {
 function 문자열_곱하기(my_string, k) {
   return my_string.repeat(k);
 }
+
+function 더_크게_합치기(a, b) {
+  var str1 = String(a) + String(b);
+  var str2 = String(b) + String(a);
+  return Math.max(str1, str2);
+}
+// 정수 두 개 string으로 합칠 때 `${a}${b}` 처럼 해도 됨
