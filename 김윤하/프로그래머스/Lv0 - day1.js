@@ -92,3 +92,7 @@ function 더_크게_합치기(a, b) {
   return Math.max(str1, str2);
 }
 // 정수 두 개 string으로 합칠 때 `${a}${b}` 처럼 해도 됨
+
+function 두_수의_연산값_비교하기(a, b) {
+  return Math.max(Number(`${a}${b}`), 2 * a * b);
+}
