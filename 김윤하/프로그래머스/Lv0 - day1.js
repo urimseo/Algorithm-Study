@@ -47,3 +47,8 @@ function 덧셈식_출력하기() {
   const [a, b] = input;
   console.log(`${a} + ${b} = ${a + b}`);
 }
+
+function 문자열_붙여서_출력하기() {
+  input = input.split(" ");
+  console.log(input.join(""));
+}
