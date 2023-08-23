@@ -81,3 +81,7 @@ function 문자열_섞기(str1, str2) {
 function 문자_리스트를_문자열로_변환하기(arr) {
   return arr.join("");
 }
+
+function 문자열_곱하기(my_string, k) {
+  return my_string.repeat(k);
+}
