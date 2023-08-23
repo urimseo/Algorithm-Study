@@ -77,3 +77,7 @@ function 문자열_섞기(str1, str2) {
   for (let i = 0; i < str1.length; i++) answer += str1[i] + str2[i];
   return answer;
 }
+
+function 문자_리스트를_문자열로_변환하기(arr) {
+  return arr.join("");
+}
