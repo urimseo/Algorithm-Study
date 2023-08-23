@@ -28,3 +28,13 @@ function 문자열_반복해서_출력하기() {
   n = Number(input[1]);
   console.log(str.repeat(n));
 }
+
+function 대소문자_바꿔서_출력하기() {
+  const arr = input.split("");
+  let newArr = arr.map((char) => {
+    return char === char.toUpperCase()
+      ? char.toLowerCase()
+      : char.toUpperCase();
+  });
+  console.log(newArr.join(""));
+}
