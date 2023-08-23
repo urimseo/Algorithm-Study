@@ -57,3 +57,9 @@ function 문자열_돌리기() {
   const arr = [...input];
   arr.map((ch) => console.log(ch));
 }
+
+function 홀짝_구분하기() {
+  n = Number(input);
+  var result = n % 2 === 0 ? `${n} is even` : `${n} is odd`;
+  console.log(result);
+}
