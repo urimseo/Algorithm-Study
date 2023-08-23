@@ -12,17 +12,17 @@ function SolveInterface(probfunc) {
   return rl;
 }
 
-function 문자열출력하기() {
+function 문자열_출력하기() {
   console.log(input);
 }
 
-function a와b출력하기() {
+function a와_b_출력하기() {
   input = input.split(" ");
   const [a, b] = input;
   console.log(`a = ${a}\nb = ${b}`);
 }
 
-function 문자열반복해서출력하기() {
+function 문자열_반복해서_출력하기() {
   input = input.split(" ");
   str = input[0];
   n = Number(input[1]);
