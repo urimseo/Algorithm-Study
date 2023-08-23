@@ -15,3 +15,9 @@ function SolveInterface(probfunc) {
 function 문자열출력하기() {
   console.log(input);
 }
+
+function a와b출력하기() {
+  input = input.split(" ");
+  const [a, b] = input;
+  console.log(`a = ${a}\nb = ${b}`);
+}
