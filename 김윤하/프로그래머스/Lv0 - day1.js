@@ -41,3 +41,9 @@ function 대소문자_바꿔서_출력하기() {
 function 특수문자_출력하기() {
   console.log("!@#$%^&*(\\'\"<>?:;");
 }
+
+function 덧셈식_출력하기() {
+  input = input.split(" ").map(Number); // python에서 map(int, input.split(' ')과 같음)
+  const [a, b] = input;
+  console.log(`${a} + ${b} = ${a + b}`);
+}
