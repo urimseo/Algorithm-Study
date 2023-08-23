@@ -30,8 +30,7 @@ function 문자열_반복해서_출력하기() {
 }
 
 function 대소문자_바꿔서_출력하기() {
-  const arr = input.split("");
-  let newArr = arr.map((char) => {
+  const arr = input.split("").map((char) => {
     return char === char.toUpperCase()
       ? char.toLowerCase()
       : char.toUpperCase();
