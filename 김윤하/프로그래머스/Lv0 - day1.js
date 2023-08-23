@@ -52,3 +52,8 @@ function 문자열_붙여서_출력하기() {
   input = input.split(" ");
   console.log(input.join(""));
 }
+
+function 문자열_돌리기() {
+  const arr = [...input];
+  arr.map((ch) => console.log(ch));
+}
