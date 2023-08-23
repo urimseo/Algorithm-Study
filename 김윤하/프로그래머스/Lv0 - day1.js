@@ -71,3 +71,9 @@ function 문자열_겹쳐쓰기(my_string, overwrite_string, s) {
   arr.splice(s, overwrite_string.length, overwrite_string);
   return arr.join("");
 }
+
+function 문자열_섞기(str1, str2) {
+  var answer = "";
+  for (let i = 0; i < str1.length; i++) answer += str1[i] + str2[i];
+  return answer;
+}
