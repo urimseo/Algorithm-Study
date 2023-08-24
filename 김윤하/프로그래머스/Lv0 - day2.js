@@ -19,3 +19,23 @@ function 홀짝에_따라_다른_값_반환하기(n) {
   }
   return answer;
 }
+
+function 조건_문자열(ineq, eq, n, m) {
+  const operator = ineq + eq;
+  let answer;
+  switch (operator) {
+    case ">=":
+      answer = n >= m;
+      break;
+    case "<=":
+      answer = n <= m;
+      break;
+    case ">!":
+      answer = n > m;
+      break;
+    case "<!":
+      answer = n < m;
+      break;
+  }
+  return Number(answer);
+}
