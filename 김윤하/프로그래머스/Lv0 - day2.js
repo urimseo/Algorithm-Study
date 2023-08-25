@@ -43,3 +43,21 @@ function 조건_문자열(ineq, eq, n, m) {
 function flag에_따라_다른_값_반환하기(a, b, flag) {
   return flag ? a + b : a - b;
 }
+
+function 코드_처리하기(code) {
+  let mode = 0; // 0 or 1
+  let ret = "";
+
+  for (let idx = 0; idx < code.length; idx++) {
+    if (code[idx] === "1") {
+      mode = mode === 1 ? 0 : 1;
+      continue; // code[idx]가 1일 때는 아래 코드 실행 X
+    }
+    if ((mode === 0 && idx % 2 === 0) || (mode === 1 && idx % 2)) {
+      ret += code[idx];
+    }
+  }
+
+  var answer = ret.length ? ret : "EMPTY";
+  return answer;
+}
