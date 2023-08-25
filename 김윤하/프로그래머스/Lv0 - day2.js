@@ -61,3 +61,13 @@ function 코드_처리하기(code) {
   var answer = ret.length ? ret : "EMPTY";
   return answer;
 }
+
+function 등차수열의_특정한_항만_더하기(a, d, included) {
+  const n = included.length;
+  let answer = 0;
+  for (let i = 0; i < n; i++) {
+    answer += included[i] ? a + i * d : 0;
+  }
+
+  return answer;
+}
