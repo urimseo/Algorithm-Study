@@ -71,3 +71,21 @@ function 등차수열의_특정한_항만_더하기(a, d, included) {
 
   return answer;
 }
+
+function 주사위_게임_2(a, b, c) {
+  var answer = 0;
+  const set = new Set([a, b, c]);
+  switch (set.size) {
+    case 3:
+      answer = a + b + c;
+      break;
+    case 2:
+      answer = (a + b + c) * (a ** 2 + b ** 2 + c ** 2);
+      break;
+    case 1:
+      answer =
+        (a + b + c) * (a ** 2 + b ** 2 + c ** 2) * (a ** 3 + b ** 3 + c ** 3);
+      break;
+  }
+  return answer;
+}
