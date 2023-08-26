@@ -167,3 +167,10 @@ function 수_조작하기_2(numLog) {
   }
   return answer;
 }
+
+function 수열과_구간_쿼리_3(arr, queries) {
+  for (let [i, j] of queries) {
+    [arr[i], arr[j]] = [arr[j], arr[i]];
+  }
+  return arr;
+}
