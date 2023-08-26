@@ -174,3 +174,21 @@ function 수열과_구간_쿼리_3(arr, queries) {
   }
   return arr;
 }
+
+function 수열과_구간_쿼리_2(arr, queries) {
+  var answer = [];
+  for (let [s, e, k] of queries) {
+    var temp = [];
+    for (let i = s; i < e + 1; i++) {
+      if (arr[i] > k) {
+        temp.push(arr[i]);
+      }
+    }
+    if (temp.length == 0) {
+      answer.push(-1);
+    } else {
+      answer.push(Math.min(...temp));
+    }
+  }
+  return answer;
+}
