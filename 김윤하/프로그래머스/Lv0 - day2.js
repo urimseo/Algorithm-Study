@@ -89,3 +89,15 @@ function 주사위_게임_2(a, b, c) {
   }
   return answer;
 }
+
+function 원소들의_곱과_합(num_list) {
+  var calMul = 1;
+  var calSum = 0;
+  for (let i = 0; i < num_list.length; i++) {
+    calMul *= num_list[i];
+    calSum += num_list[i];
+  }
+  var answer = calMul < calSum ** 2 ? 1 : 0;
+
+  return answer;
+}
