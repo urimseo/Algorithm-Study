@@ -126,3 +126,23 @@ function 마지막_두_원소(num_list) {
   }
   return num_list;
 }
+
+function 수_조작하기_1(n, control) {
+  for (let c of control) {
+    switch (c) {
+      case "w":
+        n++;
+        break;
+      case "s":
+        n--;
+        break;
+      case "d":
+        n += 10;
+        break;
+      case "a":
+        n -= 10;
+        break;
+    }
+  }
+  return n;
+}
