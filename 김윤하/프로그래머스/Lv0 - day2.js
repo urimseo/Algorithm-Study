@@ -101,3 +101,17 @@ function 원소들의_곱과_합(num_list) {
 
   return answer;
 }
+
+function 이어_붙인_수(num_list) {
+  let odd = "";
+  let even = "";
+  for (let i = 0; i < num_list.length; i++) {
+    if (num_list[i] % 2) {
+      odd += num_list[i];
+    } else {
+      even += num_list[i];
+    }
+  }
+  var answer = Number(odd) + Number(even);
+  return answer;
+}
