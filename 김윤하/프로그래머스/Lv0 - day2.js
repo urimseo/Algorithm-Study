@@ -115,3 +115,14 @@ function 이어_붙인_수(num_list) {
   var answer = Number(odd) + Number(even);
   return answer;
 }
+
+function 마지막_두_원소(num_list) {
+  var a = num_list.at(-1);
+  var b = num_list.at(-2);
+  if (a > b) {
+    num_list.push(a - b);
+  } else {
+    num_list.push(a * 2);
+  }
+  return num_list;
+}
