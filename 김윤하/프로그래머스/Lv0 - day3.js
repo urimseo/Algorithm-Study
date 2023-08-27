@@ -32,3 +32,27 @@ function 카운트_업(start_num, end_num) {
   }
   return answer;
 }
+
+function 콜라츠_수열_만들기(n) {
+  var answer = [];
+  answer.push(n);
+  while (n > 1) {
+    if (n % 2 == 0) {
+      n /= 2;
+      answer.push(n);
+    } else {
+      n = 3 * n + 1;
+      answer.push(n);
+    }
+  }
+
+  return answer;
+}
+
+// 재귀로 푸는 법
+function 콜라츠_수열_만들기_재귀(n, arr = []) {
+  arr.push(n);
+  if (n === 1) return arr;
+  if (n % 2 === 0) return solution(n / 2, arr);
+  return solution(3 * n + 1, arr);
+}
