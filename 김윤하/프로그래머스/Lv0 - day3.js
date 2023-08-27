@@ -78,3 +78,54 @@ function 간단한_논리_연산(x1, x2, x3, x4) {
   var answer = (x1 || x2) && (x3 || x4);
   return answer;
 }
+
+function 주사위_게임_3(a, b, c, d) {
+  var answer = 0;
+  var numbers = [a, b, c, d];
+  var set = new Set(numbers);
+  switch (set.size) {
+    case 1:
+      return (answer = 1111 * a);
+
+    case 2: {
+      // 3개 1개, 2개, 2개씩 같은 경우
+      const [p, q] = [...set];
+      let cnt = 0;
+      for (let i = 0; i < 4; i++) {
+        for (let j = i + 1; j < 4; j++) {
+          if (numbers[i] === numbers[j]) {
+            cnt++;
+          }
+        }
+      }
+      // 3개 1개
+      if (cnt === 3) {
+        // p와 q 판별
+        let pCnt = 0,
+          qCnt = 0;
+        numbers.forEach((n) => (n === p ? pCnt++ : qCnt++));
+        return pCnt > qCnt ? Math.pow(10 * p + q, 2) : Math.pow(10 * q + p, 2);
+      } else if (cnt === 2) {
+        return (p + q) * Math.abs(p - q);
+      }
+    }
+    case 3: {
+      const [p, q, r] = [...set];
+      let pCnt = 0,
+        qCnt = 0;
+      numbers.forEach((n) => {
+        n === p && pCnt++;
+        n === q && qCnt++;
+      });
+      if (pCnt === 2) {
+        return q * r;
+      } else if (qCnt === 2) {
+        return p * r;
+      } else {
+        return p * q;
+      }
+    }
+    case 4:
+      return Math.min(...numbers);
+  }
+}
