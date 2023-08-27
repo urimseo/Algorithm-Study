@@ -56,3 +56,20 @@ function 콜라츠_수열_만들기_재귀(n, arr = []) {
   if (n % 2 === 0) return solution(n / 2, arr);
   return solution(3 * n + 1, arr);
 }
+
+function 배열_만들기_4(arr) {
+  var stk = [];
+  let i = 0;
+  while (i < arr.length) {
+    if (stk.length === 0) {
+      stk.push(arr[i]);
+      i++;
+    } else if (stk.at(-1) < arr[i]) {
+      stk.push(arr[i]);
+      i++;
+    } else {
+      stk.pop();
+    }
+  }
+  return stk;
+}
