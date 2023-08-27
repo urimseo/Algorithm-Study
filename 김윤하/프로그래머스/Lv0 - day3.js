@@ -129,3 +129,7 @@ function 주사위_게임_3(a, b, c, d) {
       return Math.min(...numbers);
   }
 }
+
+function 글자_이어_붙여_문자열_만들기(my_string, index_list) {
+  return index_list.map((i) => my_string[i]).join("");
+}
