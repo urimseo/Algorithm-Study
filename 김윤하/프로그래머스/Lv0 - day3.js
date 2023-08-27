@@ -133,3 +133,7 @@ function 주사위_게임_3(a, b, c, d) {
 function 글자_이어_붙여_문자열_만들기(my_string, index_list) {
   return index_list.map((i) => my_string[i]).join("");
 }
+
+function solution_9로_나눈_나머지(number) {
+  return [...number].reduce((acc, cur) => acc + Number(cur), 0) % 9;
+}
