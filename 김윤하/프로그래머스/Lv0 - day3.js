@@ -73,3 +73,8 @@ function 배열_만들기_4(arr) {
   }
   return stk;
 }
+
+function 간단한_논리_연산(x1, x2, x3, x4) {
+  var answer = (x1 || x2) && (x3 || x4);
+  return answer;
+}
