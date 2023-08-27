@@ -149,3 +149,12 @@ function 문자열_여러_번_뒤집기(my_string, queries) {
   });
   return my_string;
 }
+
+function extractNumber(str, start, length) {
+  return Number(str.slice(start, start + length));
+}
+function 배열_만들기_5(intStrs, k, s, l) {
+  return intStrs
+    .map((num) => extractNumber(num, s, s + l))
+    .filter((newNum) => newNum > k);
+}
