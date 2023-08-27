@@ -137,3 +137,15 @@ function 글자_이어_붙여_문자열_만들기(my_string, index_list) {
 function solution_9로_나눈_나머지(number) {
   return [...number].reduce((acc, cur) => acc + Number(cur), 0) % 9;
 }
+
+function 문자열_여러_번_뒤집기(my_string, queries) {
+  queries.map((query) => {
+    const arr = [...my_string];
+    const [s, e] = query;
+    const sliced = arr.slice(s, e + 1);
+    const reversed = sliced.reverse().join("");
+    arr.splice(s, e - s + 1, reversed);
+    my_string = arr.join(""); // 아예 문자열로 다시 만들어버림
+  });
+  return my_string;
+}
