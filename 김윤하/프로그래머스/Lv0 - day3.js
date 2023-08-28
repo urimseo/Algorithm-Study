@@ -53,8 +53,8 @@ function 콜라츠_수열_만들기(n) {
 function 콜라츠_수열_만들기_재귀(n, arr = []) {
   arr.push(n);
   if (n === 1) return arr;
-  if (n % 2 === 0) return solution(n / 2, arr);
-  return solution(3 * n + 1, arr);
+  if (n % 2 === 0) return 콜라츠_수열_만들기_재귀(n / 2, arr);
+  return 콜라츠_수열_만들기_재귀(3 * n + 1, arr);
 }
 
 function 배열_만들기_4(arr) {
@@ -175,4 +175,10 @@ function 부분_문자열_이어_붙여_문자열_만들기_리듀서(my_strings
     acc += my_strings[idx].slice(s, e + 1);
     return acc;
   }, "");
+}
+
+function 문자열의_뒤의_n글자(my_string, n) {
+  var answer = my_string.slice(my_string.length - n);
+  // 혹은 my_string.slice(-1*n);
+  return answer;
 }
