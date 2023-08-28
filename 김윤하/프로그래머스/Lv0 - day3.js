@@ -158,3 +158,21 @@ function 배열_만들기_5(intStrs, k, s, l) {
     .map((num) => extractNumber(num, s, s + l))
     .filter((newNum) => newNum > k);
 }
+
+function 부분_문자열_이어_붙여_문자열_만들기(my_strings, parts) {
+  var answer = "";
+  for (let i = 0; i < my_strings.length; i++) {
+    const [s, e] = parts[i];
+    answer += my_strings[i].slice(s, e + 1);
+  }
+  return answer;
+}
+
+// 리듀서 사용해서 풀기
+function 부분_문자열_이어_붙여_문자열_만들기_리듀서(my_strings, parts) {
+  return parts.reduce((acc, cur, idx) => {
+    const [s, e] = cur;
+    acc += my_strings[idx].slice(s, e + 1);
+    return acc;
+  }, "");
+}
