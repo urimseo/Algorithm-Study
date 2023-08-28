@@ -190,3 +190,8 @@ function 접미사_배열(my_string) {
   }
   return answer.sort();
 }
+
+function 접미사인지_확인하기(my_string, is_suffix) {
+  var answer = my_string.endsWith(is_suffix) ? 1 : 0;
+  return answer;
+}
