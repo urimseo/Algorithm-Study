@@ -182,3 +182,11 @@ function 문자열의_뒤의_n글자(my_string, n) {
   // 혹은 my_string.slice(-1*n);
   return answer;
 }
+
+function 접미사_배열(my_string) {
+  var answer = [];
+  for (let i = 0; i < my_string.length; i++) {
+    answer.push(my_string.slice(i));
+  }
+  return answer.sort();
+}
