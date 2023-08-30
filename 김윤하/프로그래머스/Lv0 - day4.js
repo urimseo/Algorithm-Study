@@ -58,3 +58,11 @@ function 문자_개수_세기(my_string) {
   });
   return arr;
 }
+
+function 배열_만들기_1(n, k) {
+  var answer = [];
+  for (let i = k; i < n + 1; i += k) {
+    answer.push(i);
+  }
+  return answer;
+}
