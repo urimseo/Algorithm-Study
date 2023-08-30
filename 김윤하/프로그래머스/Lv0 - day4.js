@@ -7,3 +7,11 @@ function 접두사인지_확인하기(my_string, is_prefix) {
   var answer = Number(my_string.startsWith(is_prefix));
   return answer;
 }
+
+function 문자열_뒤집기(my_string, s, e) {
+  const arr = [...my_string];
+  const words = arr.slice(s, e + 1);
+  words.reverse(); // 원본 변경
+  arr.splice(s, e - s + 1, ...words); // 원본 변경
+  return arr.join("");
+}
