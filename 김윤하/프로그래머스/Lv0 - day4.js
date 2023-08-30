@@ -90,3 +90,19 @@ function 가까운_1_찾기(arr, idx) {
   }
   return -1;
 }
+
+function 리스트_자르기(n, slicer, num_list) {
+  var [a, b, c, d] = slicer;
+  var answer = [];
+  switch (n) {
+    case 1:
+      return num_list.slice(0, b + 1);
+    case 2:
+      return num_list.slice(a);
+    case 3:
+      return num_list.slice(a, b + 1);
+    case 4:
+      const curStr = num_list.slice(a, b + 1);
+      return curStr.filter((_, i) => i % c === 0);
+  }
+}
