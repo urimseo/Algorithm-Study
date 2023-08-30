@@ -129,3 +129,10 @@ function 배열_만들기_3(arr, intervals) {
   }
   return answer;
 }
+
+function solution_2의_영역(arr) {
+  const start = arr.indexOf(2);
+  const end = arr.lastIndexOf(2);
+  var answer = arr.slice(start, end + 1);
+  return start === -1 ? [-1] : answer;
+}
