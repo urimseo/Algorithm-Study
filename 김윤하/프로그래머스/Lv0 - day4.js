@@ -121,3 +121,11 @@ function 첫_번째로_나오는_음수(num_list) {
 function 첫_번째로_나오는_음수_findIndex(num_list) {
   return num_list.findIndex((v) => v < 0);
 }
+
+function 배열_만들기_3(arr, intervals) {
+  var answer = [];
+  for (let [a, b] of intervals) {
+    answer.push(...arr.slice(a, b + 1));
+  }
+  return answer;
+}
