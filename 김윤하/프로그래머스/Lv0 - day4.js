@@ -106,3 +106,18 @@ function 리스트_자르기(n, slicer, num_list) {
       return curStr.filter((_, i) => i % c === 0);
   }
 }
+
+function 첫_번째로_나오는_음수(num_list) {
+  var answer = -1;
+  for (let i of num_list) {
+    if (i < answer) {
+      answer = num_list.indexOf(i);
+      break;
+    }
+  }
+  return answer;
+}
+
+function 첫_번째로_나오는_음수_findIndex(num_list) {
+  return num_list.findIndex((v) => v < 0);
+}
