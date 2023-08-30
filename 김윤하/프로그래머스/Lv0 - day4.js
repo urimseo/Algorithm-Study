@@ -82,3 +82,11 @@ function 카운트_다운(start_num, end_num) {
   }
   return answer;
 }
+
+function 가까운_1_찾기(arr, idx) {
+  for (let i = idx; i < arr.length; i++) {
+    const cur = arr[i];
+    if (cur === 1) return i;
+  }
+  return -1;
+}
