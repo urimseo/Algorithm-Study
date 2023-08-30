@@ -66,3 +66,11 @@ function 배열_만들기_1(n, k) {
   }
   return answer;
 }
+
+function 글자_지우기(my_string, indices) {
+  var strArr = [...my_string];
+  for (let i of indices) {
+    strArr[i] = "";
+  }
+  return strArr.join("");
+}
