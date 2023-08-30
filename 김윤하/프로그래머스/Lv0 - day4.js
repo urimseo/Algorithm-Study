@@ -23,3 +23,17 @@ function 세로_읽기(my_string, m, c) {
   }
   return answer;
 }
+
+function qr_code(q, r, code) {
+  var answer = "";
+  for (let i = 0; i < code.length; i++) {
+    if (i % q === r) {
+      answer += code[i];
+    }
+  }
+  return answer;
+}
+
+function qr_code_filter(q, r, code) {
+  return [...code].filter((_, i) => i % q === r).join("");
+}
