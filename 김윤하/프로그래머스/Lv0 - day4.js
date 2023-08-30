@@ -37,3 +37,24 @@ function qr_code(q, r, code) {
 function qr_code_filter(q, r, code) {
   return [...code].filter((_, i) => i % q === r).join("");
 }
+
+function 문자_개수_세기(my_string) {
+  const char_A = 65;
+  const char_Z = 90;
+  const char_a = 97;
+  const char_z = 122;
+  const _atoz_ = 26;
+
+  let arr = new Array(_atoz_ * 2).fill(0);
+  let strArr = [...my_string];
+
+  strArr.map((el, i) => {
+    const charcode = my_string.charCodeAt(i);
+    if (charcode >= char_A && charcode <= char_Z) {
+      arr[charcode - char_A];
+    } else if (charcode >= char_a && charcode <= char_z) {
+      arr[charcode - char_a + _atoz_];
+    }
+  });
+  return arr;
+}
