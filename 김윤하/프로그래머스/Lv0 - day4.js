@@ -15,3 +15,11 @@ function 문자열_뒤집기(my_string, s, e) {
   arr.splice(s, e - s + 1, ...words); // 원본 변경
   return arr.join("");
 }
+
+function 세로_읽기(my_string, m, c) {
+  let answer = "";
+  for (let i = 0; i < my_string.length; i += m) {
+    answer += my_string[i + c - 1];
+  }
+  return answer;
+}
