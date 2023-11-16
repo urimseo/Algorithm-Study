@@ -24,3 +24,7 @@ function 왼쪽_오른쪽(str_list) {
 function n_번째_원소까지(num_list, n) {
   return num_list.slice(0, n);
 }
+
+function n개_간격의_원소들(num_list, n) {
+  return num_list.filter((_, idx) => idx % n === 0);
+}
