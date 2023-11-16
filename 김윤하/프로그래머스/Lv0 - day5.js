@@ -20,3 +20,7 @@ function 왼쪽_오른쪽(str_list) {
   const end = isL ? idx : undefined;
   return str_list.slice(start, end);
 }
+
+function n_번째_원소까지(num_list, n) {
+  return num_list.slice(0, n);
+}
