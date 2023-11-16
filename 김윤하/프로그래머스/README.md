@@ -277,6 +277,115 @@ console.log(str.endsWith("to be", 19)); // true
 
 
 
+
+
+
+
+
+
+
+
+
+
+## Statement
+
+### for
+
+**용례**
+
+```javascript
+for ([initialization]; [condition]; [final-expression])
+   statement
+// for ([초기화]; [조건]; [최종 표현식])
+//	구문
+```
+
+**예시**
+
+```javascript
+for (let i = 0; i < str1.length; i++) answer += str1[i] + str2[i];
+```
+
+
+
+### for ~ of
+
+**`for...of` 명령문**은 [반복가능한 객체](https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Iteration_protocols#iterable) ([`Array`](https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Global_Objects/Array), [`Map`](https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Global_Objects/Map), [`Set` (en-US)](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Set), [`String`](https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Global_Objects/String), [`TypedArray`](https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Global_Objects/TypedArray), [arguments](https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Functions/arguments) 객체 등을 포함)에 대해서 반복하고 각 개별 속성값에 대해 실행되는 문이 있는 사용자 정의 반복 후크를 호출하는 루프를 생성합니다.
+
+**`for...in`**은 Object에서만 사용
+
+
+
+**[참고]파이썬**
+
+`for d in data:`
+
+
+
+## 표준 내장 객체 Math - 속성
+
+### Math.max()
+
+**Math.max()** 함수는 입력값으로 받은 0개 이상의 숫자 중 가장 큰 숫자를 반환합니다.
+
+```javascript
+console.log(Math.max(1, 3, 2)); // 3
+console.log(Math.max(-1, -3, -2)); // -1
+
+const array1 = [1, 3, 2];
+
+console.log(Math.max(...array1)); // 3
+```
+
+**숫자 배열에서 최대/최소값 찾기**
+
+Math.min 또는 Math.max 메서드에 배열을 넘기면 NaN이 나옵니다.
+
+```
+const nums = [1, 2, 3]
+Math.min(nums)    // NaN
+Math.max(nums)    // Nan
+```
+
+그 이유는 Math.min 또는 Math.max 함수는 배열이 아니라 고유한 변수를 기대하기 때문입니다. 이를 위해 ES6/ES2015 적용 방법을 사용해야 합니다.
+
+```
+var nums = [1, 2, 3]
+Math.min.apply(Math, nums)    // 1
+Math.max.apply(Math, nums)    // 3
+Math.min.apply(null, nums)    // 1
+Math.max.apply(null, nums)    // 3
+```
+
+ES6/ES2016의 destructing 할당을 통해 더 쉬워집니다. destructing 할당 구문은 어레이 또는 개체에서 데이터를 추출하여 별도의 변수로 만들 수 있는 JavaScript 식입니다.
+
+```
+const nums = [1, 2, 3]
+Math.min(...nums)    // 1
+Math.max(...nums)    // 3
+```
+
+배열 앞에서 어레이를 개별 변수로 변환하여 함수에 전송합니다. 이는 다음과 같습니다.
+
+```
+Math.min(1, 2, 3)
+Math.max(1, 2, 3)
+```
+
+ **[참고] 파이썬**
+
+내장함수 `max()`
+
+1. max(*iterable*, *, *key=None*)
+
+2. max(*iterable*, *, *default*, *key=None*)
+
+3. max(*arg1*, *arg2*, **args*, *key=None*)
+
+
+
+
+
 ## 기타
 
 ### 구조분해할당
@@ -340,105 +449,6 @@ const arr = [...str];
 console.log(Array.isArray(arr));  // true
 console.log(arr);  // [ 'h', 'e', 'l', 'l', 'o' ]
 ```
-
-
-
-
-
-### for
-
-**용례**
-
-```javascript
-for ([initialization]; [condition]; [final-expression])
-   statement
-// for ([초기화]; [조건]; [최종 표현식])
-//	구문
-```
-
-**예시**
-
-```javascript
-for (let i = 0; i < str1.length; i++) answer += str1[i] + str2[i];
-```
-
-
-
-### for ~ of
-
-**`for...of` 명령문**은 [반복가능한 객체](https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Iteration_protocols#iterable) ([`Array`](https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Global_Objects/Array), [`Map`](https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Global_Objects/Map), [`Set` (en-US)](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Set), [`String`](https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Global_Objects/String), [`TypedArray`](https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Global_Objects/TypedArray), [arguments](https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Functions/arguments) 객체 등을 포함)에 대해서 반복하고 각 개별 속성값에 대해 실행되는 문이 있는 사용자 정의 반복 후크를 호출하는 루프를 생성합니다.
-
-**`for...in`**은 Object에서만 사용
-
-
-
-**[참고]파이썬**
-
-`for d in data:`
-
-
-
-
-
-### Math.max()
-
-**Math.max()** 함수는 입력값으로 받은 0개 이상의 숫자 중 가장 큰 숫자를 반환합니다.
-
-```javascript
-console.log(Math.max(1, 3, 2)); // 3
-console.log(Math.max(-1, -3, -2)); // -1
-
-const array1 = [1, 3, 2];
-
-console.log(Math.max(...array1)); // 3
-```
-
-**숫자 배열에서 최대/최소값 찾기**
-
-Math.min 또는 Math.max 메서드에 배열을 넘기면 NaN이 나옵니다.
-
-```
-const nums = [1, 2, 3]
-Math.min(nums)    // NaN
-Math.max(nums)    // Nan
-```
-
-그 이유는 Math.min 또는 Math.max 함수는 배열이 아니라 고유한 변수를 기대하기 때문입니다. 이를 위해 ES6/ES2015 적용 방법을 사용해야 합니다.
-
-```
-var nums = [1, 2, 3]
-Math.min.apply(Math, nums)    // 1
-Math.max.apply(Math, nums)    // 3
-Math.min.apply(null, nums)    // 1
-Math.max.apply(null, nums)    // 3
-```
-
-ES6/ES2016의 destructing 할당을 통해 더 쉬워집니다. destructing 할당 구문은 어레이 또는 개체에서 데이터를 추출하여 별도의 변수로 만들 수 있는 JavaScript 식입니다.
-
-```
-const nums = [1, 2, 3]
-Math.min(...nums)    // 1
-Math.max(...nums)    // 3
-```
-
-배열 앞에서 어레이를 개별 변수로 변환하여 함수에 전송합니다. 이는 다음과 같습니다.
-
-```
-Math.min(1, 2, 3)
-Math.max(1, 2, 3)
-```
-
- **[참고] 파이썬**
-
-내장함수 `max()`
-
-1. max(*iterable*, *, *key=None*)
-
-2. max(*iterable*, *, *default*, *key=None*)
-
-3. max(*arg1*, *arg2*, **args*, *key=None*)
-
-
 
 
 
