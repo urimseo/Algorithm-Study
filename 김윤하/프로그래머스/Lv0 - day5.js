@@ -42,3 +42,11 @@ function 다섯_명씩(names) {
 
     return names.filter((_, i) => i % 5 == 0);
 }
+
+function 할_일_목록(todo_list, finished) {
+    var answer = [];
+    for (let i = 0; i < finished.length; i++) {
+        if (!finished[i]) { answer.push(todo_list[i])}
+    }
+    return answer;
+}
