@@ -28,3 +28,10 @@ function n_번째_원소까지(num_list, n) {
 function n개_간격의_원소들(num_list, n) {
   return num_list.filter((_, idx) => idx % n === 0);
 }
+
+function 홀수_vs_짝수(num_list) {
+    var odd = 0;
+    var even = 0;
+    num_list.map((num, idx) => idx % 2 ? odd += num : even += num)
+    return Math.max(odd, even);
+}
