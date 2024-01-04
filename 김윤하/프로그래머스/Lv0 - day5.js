@@ -68,3 +68,20 @@ function n보다_커질_때까지_더하기(numbers, n) {
     // }
     return answer;
 }
+
+function 수열과_구간_쿼리_1(arr, queries) {
+    var answer = [...arr];
+    for (let query of queries) {
+        let s, e;
+        [s, e] = query;
+        for (let i = s; i < e+1; i++) {
+            answer[i]++;
+        }
+    }
+    return answer;
+    // queries.forEach(([s, e]) => {
+    //     while (s <= e) arr[s++]++;
+    // });
+    // return arr;
+}
+
