@@ -50,3 +50,21 @@ function 할_일_목록(todo_list, finished) {
     }
     return answer;
 }
+
+function n보다_커질_때까지_더하기(numbers, n) {
+    var answer = 0;
+    for (let number of numbers) {
+        if (answer > n) {
+            break
+        } else {
+            answer += number
+        }
+    }
+
+    // // while로 풀기
+    // let i = 0;
+    // while (answer <= n) {
+    //     answer += numbers[i++]
+    // }
+    return answer;
+}
