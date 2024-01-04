@@ -35,3 +35,10 @@ function 홀수_vs_짝수(num_list) {
     num_list.map((num, idx) => idx % 2 ? odd += num : even += num)
     return Math.max(odd, even);
 }
+
+function 다섯_명씩(names) {
+    // var answer = 0;
+    // names.map((name, idx) => idx % 5 == 0 ? answer.push(name) : null)
+
+    return names.filter((_, i) => i % 5 == 0);
+}
