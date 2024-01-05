@@ -85,3 +85,15 @@ function 수열과_구간_쿼리_1(arr, queries) {
     // return arr;
 }
 
+function 조건에_맞게_수열_변환하기_1(arr) {
+    return arr.map(num =>
+        num >= 50 && num % 2 === 0 ? num / 2 :
+        num <= 50 && num % 2 ? num * 2 :
+        num
+    )
+}
+
+
+
+
+
