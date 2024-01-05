@@ -97,11 +97,11 @@ function 조건에_맞게_수열_변환하기_2(arr) {
     let idx = 0
     let prevArr = arr
     while(true) {
-        const curArr = prevArr.map(a => {
+        const curArr = prevArr.map(a =>
             a >= 50 && a%2 === 0 ? a/2 :
             a < 50 && a%2 ? a*2+1 :
             a
-        })
+
         // 이전의 모든 배열과 현재 모든 배열의 요소 비교
         if (prevArr.every((a, i) => a === curArr[i])) break
         idx+=1
