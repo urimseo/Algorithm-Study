@@ -21,3 +21,7 @@ function 길이에_따른_연산(num_list) {
   // reduce로 풀기
   // return num_list.reduce((a,v)=> num_list.length > 10 ? a+v : a*v )
 }
+
+function 원하는_문자열_찾기(myString, pat) {
+  return myString.toLowerCase().includes(pat.toLowerCase()) ? 1 : 0;
+}
