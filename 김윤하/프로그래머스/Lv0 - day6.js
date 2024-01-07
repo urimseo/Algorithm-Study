@@ -25,3 +25,7 @@ function 길이에_따른_연산(num_list) {
 function 원하는_문자열_찾기(myString, pat) {
   return myString.toLowerCase().includes(pat.toLowerCase()) ? 1 : 0;
 }
+
+function 대문자로_바꾸기(myString) {
+  return myString.toUpperCase();
+}
