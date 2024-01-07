@@ -11,11 +11,11 @@ function 순서_바꾸기(num_list, n) {
 }
 
 function 왼쪽_오른쪽(str_list) {
-  var idx = str_list.findIndex((el) => el === "l" || el === "r");
+  var idx = str_list.findIndex((el) => el === 'l' || el === 'r');
   if (idx === -1) {
     return [];
   }
-  const isL = str_list[idx] === "l";
+  const isL = str_list[idx] === 'l';
   const start = isL ? 0 : idx + 1;
   const end = isL ? idx : undefined;
   return str_list.slice(start, end);
@@ -30,83 +30,81 @@ function n개_간격의_원소들(num_list, n) {
 }
 
 function 홀수_vs_짝수(num_list) {
-    var odd = 0;
-    var even = 0;
-    num_list.map((num, idx) => idx % 2 ? odd += num : even += num)
-    return Math.max(odd, even);
+  var odd = 0;
+  var even = 0;
+  num_list.map((num, idx) => (idx % 2 ? (odd += num) : (even += num)));
+  return Math.max(odd, even);
 }
 
 function 다섯_명씩(names) {
-    // var answer = 0;
-    // names.map((name, idx) => idx % 5 == 0 ? answer.push(name) : null)
+  // var answer = 0;
+  // names.map((name, idx) => idx % 5 == 0 ? answer.push(name) : null)
 
-    return names.filter((_, i) => i % 5 == 0);
+  return names.filter((_, i) => i % 5 == 0);
 }
 
 function 할_일_목록(todo_list, finished) {
-    var answer = [];
-    for (let i = 0; i < finished.length; i++) {
-        if (!finished[i]) { answer.push(todo_list[i])}
+  var answer = [];
+  for (let i = 0; i < finished.length; i++) {
+    if (!finished[i]) {
+      answer.push(todo_list[i]);
     }
-    return answer;
+  }
+  return answer;
 }
 
 function n보다_커질_때까지_더하기(numbers, n) {
-    var answer = 0;
-    for (let number of numbers) {
-        if (answer > n) {
-            break
-        } else {
-            answer += number
-        }
+  var answer = 0;
+  for (let number of numbers) {
+    if (answer > n) {
+      break;
+    } else {
+      answer += number;
     }
+  }
 
-    // // while로 풀기
-    // let i = 0;
-    // while (answer <= n) {
-    //     answer += numbers[i++]
-    // }
-    return answer;
+  // // while로 풀기
+  // let i = 0;
+  // while (answer <= n) {
+  //     answer += numbers[i++]
+  // }
+  return answer;
 }
 
 function 수열과_구간_쿼리_1(arr, queries) {
-    var answer = [...arr];
-    for (let query of queries) {
-        let s, e;
-        [s, e] = query;
-        for (let i = s; i < e+1; i++) {
-            answer[i]++;
-        }
+  var answer = [...arr];
+  for (let query of queries) {
+    let s, e;
+    [s, e] = query;
+    for (let i = s; i < e + 1; i++) {
+      answer[i]++;
     }
-    return answer;
-    // queries.forEach(([s, e]) => {
-    //     while (s <= e) arr[s++]++;
-    // });
-    // return arr;
+  }
+  return answer;
+  // queries.forEach(([s, e]) => {
+  //     while (s <= e) arr[s++]++;
+  // });
+  // return arr;
 }
 
 function 조건에_맞게_수열_변환하기_1(arr) {
-    return arr.map(num =>
-        num >= 50 && num % 2 === 0 ? num / 2 :
-        num <= 50 && num % 2 ? num * 2 :
-        num
-    )
+  return arr.map((num) =>
+    num >= 50 && num % 2 === 0 ? num / 2 : num <= 50 && num % 2 ? num * 2 : num
+  );
 }
 
 function 조건에_맞게_수열_변환하기_2(arr) {
-    let idx = 0
-    let prevArr = arr
-    while(true) {
-        const curArr = prevArr.map(a =>
-            a >= 50 && a%2 === 0 ? a/2 :
-            a < 50 && a%2 ? a*2+1 :
-            a
-
-        // 이전의 모든 배열과 현재 모든 배열의 요소 비교
-        if (prevArr.every((a, i) => a === curArr[i])) break
-        idx+=1
-        // 현재 배열을 이전 배열 변수에 저장함
-        prevArr = curArr
-    }
-    return idx
+  let idx = 0;
+  let prevArr = arr;
+  while (true) {
+    const curArr = prevArr.map((a) =>
+      a >= 50 && a % 2 === 0 ? a / 2 : a < 50 && a % 2 ? a * 2 + 1 : a
+    );
+    // 이전의 모든 배열과 현재 모든 배열의 요소 비교
+    if (prevArr.every((a, i) => a === curArr[i])) break;
+    idx += 1;
+    // 현재 배열을 이전 배열 변수에 저장함
+    prevArr = curArr;
+  }
+  return idx;
 }
