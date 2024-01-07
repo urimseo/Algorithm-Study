@@ -29,3 +29,7 @@ function 원하는_문자열_찾기(myString, pat) {
 function 대문자로_바꾸기(myString) {
   return myString.toUpperCase();
 }
+
+function 소문자로_바꾸기(myString) {
+  return myString.toLowerCase();
+}
