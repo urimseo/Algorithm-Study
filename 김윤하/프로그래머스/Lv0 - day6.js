@@ -39,3 +39,7 @@ function 배열에서_문자열_대소문자_변환하기(strArr) {
     idx % 2 ? val.toUpperCase() : val.toLowerCase()
   );
 }
+
+function A_강조하기(myString) {
+  return myString.toLowerCase().replace(/a/g, 'A');
+}
