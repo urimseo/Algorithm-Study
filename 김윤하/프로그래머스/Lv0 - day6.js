@@ -33,3 +33,9 @@ function 대문자로_바꾸기(myString) {
 function 소문자로_바꾸기(myString) {
   return myString.toLowerCase();
 }
+
+function 배열에서_문자열_대소문자_변환하기(strArr) {
+  return strArr.map((val, idx) =>
+    idx % 2 ? val.toUpperCase() : val.toLowerCase()
+  );
+}
