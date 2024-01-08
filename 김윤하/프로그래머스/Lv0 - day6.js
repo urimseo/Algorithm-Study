@@ -71,3 +71,7 @@ function 문자열이_몇_번_등장하는지_세기(myString, pat) {
   }
   return cnt;
 }
+
+function ad_제거하기(strArr) {
+  return strArr.filter((val) => !val.includes('ad'));
+}
