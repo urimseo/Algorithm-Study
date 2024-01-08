@@ -79,3 +79,7 @@ function ad_제거하기(strArr) {
 function 공백으로_구분하기_1(my_string) {
   return my_string.split(' ');
 }
+
+function 공백으로_구분하기_2(my_string) {
+  return my_string.split(' ').filter((val) => val !== '');
+}
