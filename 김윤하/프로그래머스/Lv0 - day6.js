@@ -43,3 +43,17 @@ function 배열에서_문자열_대소문자_변환하기(strArr) {
 function A_강조하기(myString) {
   return myString.toLowerCase().replace(/a/g, 'A');
 }
+
+function 특정한_문자를_대문자로_바꾸기(my_string, alp) {
+  var answer = '';
+  // map은 string이라서 적용 안 됨
+  // val = val.toUpperCase() 이런 식으로 바로 적용 안 되기 때문에 새로운 변수 만들어서 붙여줘야 함
+
+  for (let val of my_string) {
+    val === alp ? (answer += val.toUpperCase()) : (answer += val);
+  }
+  return answer;
+
+  // replaceAll로 풀기
+  // return my_string.replaceAll(alp, alp.toUpperCase())
+}
