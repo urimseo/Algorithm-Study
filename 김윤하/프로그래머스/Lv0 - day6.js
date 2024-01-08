@@ -83,3 +83,7 @@ function 공백으로_구분하기_1(my_string) {
 function 공백으로_구분하기_2(my_string) {
   return my_string.split(' ').filter((val) => val !== '');
 }
+
+function x_사이의_개수(myString) {
+  return myString.split('x').map((v) => v.length);
+}
