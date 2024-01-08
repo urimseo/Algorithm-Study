@@ -75,3 +75,7 @@ function 문자열이_몇_번_등장하는지_세기(myString, pat) {
 function ad_제거하기(strArr) {
   return strArr.filter((val) => !val.includes('ad'));
 }
+
+function 공백으로_구분하기_1(my_string) {
+  return my_string.split(' ');
+}
