@@ -87,3 +87,10 @@ function 공백으로_구분하기_2(my_string) {
 function x_사이의_개수(myString) {
   return myString.split('x').map((v) => v.length);
 }
+
+function 문자열_잘라서_정렬하기(myString) {
+  return myString
+    .split('x')
+    .filter((v) => v !== '')
+    .sort();
+}
