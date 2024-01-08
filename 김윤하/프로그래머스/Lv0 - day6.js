@@ -61,3 +61,13 @@ function 특정한_문자를_대문자로_바꾸기(my_string, alp) {
 function 특정_문자열로_끝나는_가장_긴_부분_문자열_찾기(myString, pat) {
   return myString.slice(0, myString.lastIndexOf(pat) + pat.length);
 }
+
+function 문자열이_몇_번_등장하는지_세기(myString, pat) {
+  let cnt = 0;
+  for (let i = 0; i <= myString.length - pat.length; i++) {
+    if (myString.slice(i, i + pat.length) === pat) {
+      cnt++;
+    }
+  }
+  return cnt;
+}
