@@ -57,3 +57,7 @@ function 특정한_문자를_대문자로_바꾸기(my_string, alp) {
   // replaceAll로 풀기
   // return my_string.replaceAll(alp, alp.toUpperCase())
 }
+
+function 특정_문자열로_끝나는_가장_긴_부분_문자열_찾기(myString, pat) {
+  return myString.slice(0, myString.lastIndexOf(pat) + pat.length);
+}
