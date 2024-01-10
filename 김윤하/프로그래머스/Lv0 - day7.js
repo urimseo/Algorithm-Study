@@ -99,3 +99,20 @@ function 배열의_길이를_2의_거듭제곱으로_만들기(arr) {
 
   return [...arr, ...Array(fillNum).fill(0)];
 }
+
+function 배열_비교하기(arr1, arr2) {
+  var big = 0;
+  const sumArr = (arr) => arr.reduce((a, c) => a + c);
+
+  arr1.length > arr2.length
+    ? (big = 1)
+    : arr1.length < arr2.length
+    ? (big = -1)
+    : sumArr(arr1) > sumArr(arr2)
+    ? (big = 1)
+    : sumArr(arr1) < sumArr(arr2)
+    ? (big = -1)
+    : null;
+
+  return big;
+}
