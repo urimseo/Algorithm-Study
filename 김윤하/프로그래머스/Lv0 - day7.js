@@ -116,3 +116,17 @@ function 배열_비교하기(arr1, arr2) {
 
   return big;
 }
+
+function 문자열_묶기(strArr) {
+  // 딕셔너리로 풀기
+  const dict = {};
+  // key: 문자열 길이, value: 문자열 목록
+  strArr.forEach((item) => {
+    const len = item.length;
+    dict[len] = dict[len] ?? []; // a ?? b : a가 undefined나 null이 아니면 a, 맞으면 b
+    dict[len].push(item);
+  });
+  // 길이 별 목록 수의 최댓값
+  const values = Object.values(dict).map((a) => a.length);
+  return Math.max(...values);
+}
