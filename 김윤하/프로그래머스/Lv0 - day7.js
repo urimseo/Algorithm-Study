@@ -40,3 +40,19 @@ function 배열의_원소만큼_추가하기(arr) {
   // 다른 풀이 2
   // return arr.reduce((a, c) => a.concat(Array(c).fill(c)), []);
 }
+
+function 빈_배열에_추가_삭제하기(arr, flag) {
+  var X = [];
+  for (let i = 0; i < arr.length; i++) {
+    if (flag[i]) {
+      for (let j = 0; j < arr[i] * 2; j++) {
+        X.push(arr[i]);
+      }
+    } else {
+      for (let j = 0; j < arr[i]; j++) {
+        X.pop();
+      }
+    }
+  }
+  return X;
+}
