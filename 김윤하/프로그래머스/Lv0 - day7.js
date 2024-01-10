@@ -27,3 +27,16 @@ function 세_개의_구분자(myStr) {
   const result = myStr.split(/[a|b|c]/g).filter((a) => a);
   return result.length ? result : ['EMPTY'];
 }
+
+function 배열의_원소만큼_추가하기(arr) {
+  var answer = [];
+  arr.map((val) => {
+    for (let i = 0; i < val; i++) answer.push(val);
+  });
+  return answer;
+
+  // 다른 풀이 1
+  // return arr.reduce((list, num) => [...list, ...new Array(num).fill(num)], []);
+  // 다른 풀이 2
+  // return arr.reduce((a, c) => a.concat(Array(c).fill(c)), []);
+}
