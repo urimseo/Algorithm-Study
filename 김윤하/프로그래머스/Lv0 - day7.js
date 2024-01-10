@@ -18,3 +18,7 @@ function 문자열_바꿔서_찾기(myString, pat) {
     .join('');
   return answer.includes(pat) ? 1 : 0;
 }
+
+function rny_string(rny_string) {
+  return rny_string.replaceAll('m', 'rn');
+}
