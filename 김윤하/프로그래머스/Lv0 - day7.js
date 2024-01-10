@@ -10,3 +10,11 @@ function 간단한_식_계산하기(binomial) {
     ? a * b
     : null;
 }
+
+function 문자열_바꿔서_찾기(myString, pat) {
+  var answer = myString
+    .split('')
+    .map((val) => (val === 'A' ? 'B' : 'A'))
+    .join('');
+  return answer.includes(pat) ? 1 : 0;
+}
