@@ -64,3 +64,30 @@ function 배열_만들기_6(arr) {
   }
   return stk.length ? stk : [-1];
 }
+
+function 무작위로_K개의_수_뽑기(arr, k) {
+  const set = new Set(arr);
+  var answer = [...set];
+  if (answer.length > k) {
+    answer = answer.slice(0, k);
+  } else {
+    while (answer.length < k) {
+      answer.push(-1);
+    }
+  }
+  return answer;
+
+  /*  다른 풀이 1: 한 줄로 풀기 
+  const set = new Set(arr);
+  return set.size < k ? [...set, ...Array(k - set.size).fill(-1)] : [...set].slice(0, k);
+  */
+
+  // 다른 풀이 2: if 문 생략 가능 !! slice는 크게 잘라도 오류 안 남.
+  // "만약 end 값이 배열의 길이보다 크다면, slice()는 배열의 끝까지(arr.length) 추출합니다.""
+  // const set = new Set(arr);
+  // const result = [...set].slice(0, k);
+  // while (result.length !== k) {
+  //   result.push(-1);
+  // }
+  // return result;
+}
