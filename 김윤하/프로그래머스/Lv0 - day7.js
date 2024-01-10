@@ -91,3 +91,11 @@ function 무작위로_K개의_수_뽑기(arr, k) {
   // }
   // return result;
 }
+
+function 배열의_길이를_2의_거듭제곱으로_만들기(arr) {
+  var exponent = 0;
+  while (Math.pow(2, exponent) < arr.length) exponent++;
+  let fillNum = Math.pow(2, exponent) - arr.length;
+
+  return [...arr, ...Array(fillNum).fill(0)];
+}
