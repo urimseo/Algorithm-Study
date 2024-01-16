@@ -197,3 +197,20 @@ function 연속된_수의_합(num, total) {
 function 종이_자르기(M, N) {
   return M - 1 + (N - 1) * M;
 }
+
+function 문자열_밀기(A, B) {
+  let arr = [...A];
+  for (let i = 0; i < arr.length; i++) {
+    if (A === B) {
+      return i;
+    } else {
+      arr.unshift(arr.pop());
+      if (arr.join('') === B) {
+        return i + 1;
+      }
+    }
+  }
+  return -1;
+}
+
+// memo : (a,b)=>(b+b).indexOf(a)
