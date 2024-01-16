@@ -68,3 +68,8 @@ function 문자열_계산하기(my_string) {
   }
   return answer;
 }
+
+function 가장_큰_수_찾기(array) {
+  var max = Math.max(...array);
+  return [max, array.indexOf(max)];
+}
