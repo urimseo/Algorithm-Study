@@ -226,3 +226,7 @@ function 잘라서_배열로_저장하기(my_str, n) {
 function 칠7의_개수(array) {
   return array.join('').split('7').length;
 }
+
+function 문자열_정렬하기_2(my_string) {
+  return my_string.toLowerCase().split('').sort().join('');
+}
