@@ -23,3 +23,7 @@ function OX퀴즈(quiz) {
   }
   return answer;
 }
+
+function 자릿수_더하기(n) {
+  return [...String(n)].reduce((a, c) => Number(a) + Number(c), 0);
+}
