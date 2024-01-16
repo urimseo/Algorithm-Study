@@ -171,3 +171,14 @@ function 옹알이_1(babbling) {
   }
   return count;
 }
+
+function 다음에_올_숫자(common) {
+  var answer = 0;
+  var len = common.length;
+  if (common[1] - common[0] === common[2] - common[1]) {
+    answer = common[len - 1] + common[1] - common[0];
+  } else {
+    answer = common[len - 1] * (common[len - 1] / common[len - 2]);
+  }
+  return answer;
+}
