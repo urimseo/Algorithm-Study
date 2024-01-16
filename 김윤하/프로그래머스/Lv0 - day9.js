@@ -40,3 +40,18 @@ function 숫자_찾기(num, k) {
   // 좌항이 -1을 리턴하면 +1로 인해 0이 되므로 0 || -1을 연산하면 -1 이 됨
   // 즉 -1이라면 -1 나머지는 k의 인덱스 + 1이 됨
 }
+
+function 배열의_유사도(s1, s2) {
+  var answer = 0;
+  for (let i of s1) {
+    for (let j of s2) {
+      if (i === j) {
+        answer++;
+        break;
+      }
+    }
+  }
+  return answer;
+  // 교집합
+  // return s1.filter((x) => s2.includes(x)).length
+}
