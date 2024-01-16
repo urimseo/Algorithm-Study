@@ -184,3 +184,7 @@ function 문자열로_변환(n) {
 function 배열의_원소_삭제하기(arr, delete_list) {
   return arr.filter((val) => !delete_list.includes(val));
 }
+
+function 부분_문자열인지_확인하기(my_string, target) {
+  return +my_string.includes(target);
+}
