@@ -89,3 +89,13 @@ function 약수_구하기(n) {
   const set = new Set(answer);
   return [...set].sort((a, b) => a - b);
 }
+
+function 한_번만_등장한_문자(s) {
+  let res = [];
+  for (let c of s) {
+    if (s.indexOf(c) === s.lastIndexOf(c)) {
+      res.push(c);
+    }
+  }
+  return res.sort().join('');
+}
