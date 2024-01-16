@@ -99,3 +99,20 @@ function 한_번만_등장한_문자(s) {
   }
   return res.sort().join('');
 }
+
+function 인덱스_바꾸기(my_string, num1, num2) {
+  var arr = [...my_string];
+  const str1 = arr[num1];
+  const str2 = arr[num2];
+
+  arr[num1] = str2;
+  arr[num2] = str1;
+
+  return arr.join('');
+}
+
+function solution2(my_string, num1, num2) {
+  my_string = my_string.split('');
+  [my_string[num1], my_string[num2]] = [my_string[num2], my_string[num1]];
+  return my_string.join('');
+}
