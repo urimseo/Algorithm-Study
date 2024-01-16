@@ -27,3 +27,7 @@ function OX퀴즈(quiz) {
 function 자릿수_더하기(n) {
   return [...String(n)].reduce((a, c) => Number(a) + Number(c), 0);
 }
+
+function n의_배수_고르기(n, numlist) {
+  return numlist.filter((num) => num % n === 0);
+}
