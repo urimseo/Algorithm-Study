@@ -60,3 +60,7 @@ function 그림_확대(picture, k) {
 function 조건에_맞게_수열_변환하기_3(arr, k) {
   return arr.map((val) => (k % 2 ? val * k : val + k));
 }
+
+function l로_만들기(myString) {
+  return [...myString].reduce((a, c) => (c < 'l' ? a + 'l' : c));
+}
