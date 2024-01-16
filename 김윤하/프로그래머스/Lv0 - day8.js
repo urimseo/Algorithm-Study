@@ -109,3 +109,24 @@ function 정수를_나선형으로_배치하기(n) {
   }
   return answer;
 }
+
+function 특별한_이차원_배열_2(arr) {
+  const n = arr.length;
+  var answer = 1;
+  for (let i = 0; i < n; i++) {
+    for (let j = 0; j < n; j++) {
+      if (i !== j) {
+        if (arr[i][j] !== arr[j][i]) {
+          answer = 0;
+        }
+      }
+    }
+  }
+  return answer;
+}
+
+function solution2(arr) {
+  return arr.every((r, i) => r.every((_, j) => arr[i][j] === arr[j][i]))
+    ? 1
+    : 0;
+}
