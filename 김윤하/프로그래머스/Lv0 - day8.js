@@ -193,3 +193,7 @@ function 연속된_수의_합(num, total) {
     .map((v, idx) => v + idx);
   return answer;
 }
+
+function 종이_자르기(M, N) {
+  return M - 1 + (N - 1) * M;
+}
