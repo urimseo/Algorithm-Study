@@ -192,3 +192,7 @@ function 부분_문자열인지_확인하기(my_string, target) {
 function 부분_문자열(str1, str2) {
   return str2.includes(str1) ? 1 : 0;
 }
+
+function 꼬리_문자열(str_list, ex) {
+  return str_list.filter((val) => !val.includes(ex)).join('');
+}
