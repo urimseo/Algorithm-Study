@@ -130,3 +130,7 @@ function 문자열_묶기(strArr) {
   const values = Object.values(dict).map((a) => a.length);
   return Math.max(...values);
 }
+
+function 배열의_길이에_따라_다른_연산하기(arr, n) {
+  return arr.map((num, idx) => (arr.length % 2 !== idx % 2 ? num + n : num));
+}
