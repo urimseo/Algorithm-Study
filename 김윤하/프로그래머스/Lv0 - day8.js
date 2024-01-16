@@ -79,3 +79,33 @@ function 특별한_이차원_배열_1(n) {
   }
   return arr;
 }
+
+function 정수를_나선형으로_배치하기(n) {
+  // 나선형(우하좌상)
+  const move = [
+    [0, 1],
+    [1, 0],
+    [0, -1],
+    [-1, 0],
+  ];
+  const answer = Array.from(Array(n), () => Array(n).fill(0));
+
+  let x = 0,
+    y = 0,
+    d = 0,
+    num = 1;
+  while (num <= n ** 2) {
+    answer[x][y] = num;
+    let nx = x + move[d][0];
+    let ny = y + move[d][1];
+    if (nx >= n || nx < 0 || ny >= n || ny < 0 || answer[nx][ny] !== 0) {
+      d = (d + 1) % 4;
+      nx = x + move[d][0];
+      ny = y + move[d][1];
+    }
+    x = nx;
+    y = ny;
+    num++;
+  }
+  return answer;
+}
