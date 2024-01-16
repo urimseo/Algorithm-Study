@@ -172,3 +172,7 @@ function 문자열을_정수로_변환하기(n_str) {
 function 영0_떼기(n_str) {
   return `${+n_str}`;
 }
+
+function 두_수의_합(a, b) {
+  return String(BigInt(a) + BigInt(b));
+}
