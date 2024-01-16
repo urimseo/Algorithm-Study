@@ -176,3 +176,7 @@ function 영0_떼기(n_str) {
 function 두_수의_합(a, b) {
   return String(BigInt(a) + BigInt(b));
 }
+
+function 문자열로_변환(n) {
+  return String(n);
+}
