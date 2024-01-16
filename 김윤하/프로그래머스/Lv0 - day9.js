@@ -13,3 +13,13 @@ function 제곱수_판별하기(n) {
 function 문자열안에_문자열(str1, str2) {
   return str1.includes(str2) ? 1 : 2;
 }
+
+function OX퀴즈(quiz) {
+  var answer = [];
+  for (let val of quiz) {
+    var arr = val.split(' ');
+    var left = arr[1] === '+' ? +arr[0] + +arr[2] : +arr[0] - +arr[2];
+    left === +arr[4] ? answer.push('O') : answer.push('X');
+  }
+  return answer;
+}
