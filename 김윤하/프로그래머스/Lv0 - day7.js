@@ -188,3 +188,7 @@ function 배열의_원소_삭제하기(arr, delete_list) {
 function 부분_문자열인지_확인하기(my_string, target) {
   return +my_string.includes(target);
 }
+
+function 부분_문자열(str1, str2) {
+  return str2.includes(str1) ? 1 : 0;
+}
