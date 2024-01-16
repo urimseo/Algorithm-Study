@@ -180,3 +180,7 @@ function 두_수의_합(a, b) {
 function 문자열로_변환(n) {
   return String(n);
 }
+
+function 배열의_원소_삭제하기(arr, delete_list) {
+  return arr.filter((val) => !delete_list.includes(val));
+}
