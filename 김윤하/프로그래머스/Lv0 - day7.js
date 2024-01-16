@@ -134,3 +134,11 @@ function 문자열_묶기(strArr) {
 function 배열의_길이에_따라_다른_연산하기(arr, n) {
   return arr.map((num, idx) => (arr.length % 2 !== idx % 2 ? num + n : num));
 }
+
+function 뒤에서_5등까지(num_list) {
+  return num_list.sort((a, b) => a - b).slice(0, 5);
+}
+
+function 뒤에서_5등_위로(num_list) {
+  return num_list.sort((a, b) => a - b).slice(5);
+}
