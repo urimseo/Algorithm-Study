@@ -55,3 +55,16 @@ function 배열의_유사도(s1, s2) {
   // 교집합
   // return s1.filter((x) => s2.includes(x)).length
 }
+
+function 문자열_계산하기(my_string) {
+  const arr = my_string.split(' ');
+  var answer = +arr[0];
+  for (let i = 1; i < arr.length; i++) {
+    if (arr[i] === '+') {
+      answer += +arr[i + 1];
+    } else if (arr[i] === '-') {
+      answer -= +arr[i + 1];
+    }
+  }
+  return answer;
+}
