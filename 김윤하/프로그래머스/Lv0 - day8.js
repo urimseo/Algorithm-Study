@@ -214,3 +214,11 @@ function 문자열_밀기(A, B) {
 }
 
 // memo : (a,b)=>(b+b).indexOf(a)
+
+function 잘라서_배열로_저장하기(my_str, n) {
+  let res = [];
+  for (let i = 0; i < my_str.length; i += n) {
+    res.push(my_str.slice(i, i + n));
+  }
+  return res;
+}
