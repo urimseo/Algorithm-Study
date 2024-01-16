@@ -182,3 +182,14 @@ function 다음에_올_숫자(common) {
   }
   return answer;
 }
+
+function 연속된_수의_합(num, total) {
+  const firstValue =
+    num % 2 === 0
+      ? Math.ceil(total / num) - num / 2
+      : total / num - Math.floor(num / 2);
+  const answer = Array(num)
+    .fill(firstValue)
+    .map((v, idx) => v + idx);
+  return answer;
+}
