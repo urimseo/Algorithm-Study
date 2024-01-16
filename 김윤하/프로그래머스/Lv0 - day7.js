@@ -150,3 +150,9 @@ function 전국_대회_선발_고사(rank, attendance) {
     .sort(([a], [b]) => a - b);
   return 10000 * a[1] + 100 * b[1] + c[1];
 }
+
+function 정수_부분(flo) {
+  return Math.trunc(flo); // trunc는 정수 부분만 return
+  // Math.floor() 함수는 주어진 숫자와 같거나 작은 정수 중에서 가장 큰 수를 반환합니다.
+  // Math.floor(-45.05); // -46
+}
