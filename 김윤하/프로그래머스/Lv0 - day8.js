@@ -44,3 +44,15 @@ function solution2(order) {
     0
   );
 }
+
+function 그림_확대(picture, k) {
+  let answer = [];
+
+  picture.forEach((v) => {
+    const expanded = [...v].reduce((acc, curr) => acc + curr.repeat(k), '');
+    // initialValue를 제공하지 않은 경우 배열의 첫 번째 요소를 사용.
+    for (let i = 0; i < k; i++) answer.push(expanded);
+  });
+
+  return answer;
+}
