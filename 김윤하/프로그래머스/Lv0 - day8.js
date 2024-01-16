@@ -25,3 +25,22 @@ function 날짜_비교하기(date1, date2) {
   }
   return answer;
 }
+
+function 커피_심부름(order) {
+  var cost = 0;
+  order.map((val) => {
+    if (val.includes('cafelatte')) {
+      cost += 5000;
+    } else {
+      cost += 4500;
+    }
+  });
+  return cost;
+}
+
+function solution2(order) {
+  return order.reduce(
+    (acc, cur) => acc + (cur.includes('latte') ? 5000 : 4500),
+    0
+  );
+}
