@@ -73,3 +73,7 @@ function 가장_큰_수_찾기(array) {
   var max = Math.max(...array);
   return [max, array.indexOf(max)];
 }
+
+function 편지(message) {
+  return message.length * 2;
+}
