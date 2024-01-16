@@ -64,3 +64,18 @@ function 조건에_맞게_수열_변환하기_3(arr, k) {
 function l로_만들기(myString) {
   return [...myString].reduce((a, c) => (c < 'l' ? a + 'l' : c));
 }
+
+function 특별한_이차원_배열_1(n) {
+  var arr = new Array(n);
+  for (var i = 0; i < arr.length; i++) {
+    arr[i] = new Array(n);
+  }
+  // ES6 : const arr = Array.from(Array(n), () => Array(n).fill(0));
+
+  for (let i = 0; i < n; i++) {
+    for (let j = 0; j < n; j++) {
+      i === j ? (arr[i][j] = 1) : (arr[i][j] = 0);
+    }
+  }
+  return arr;
+}
