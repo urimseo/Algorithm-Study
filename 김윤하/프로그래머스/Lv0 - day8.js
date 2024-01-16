@@ -56,3 +56,7 @@ function 그림_확대(picture, k) {
 
   return answer;
 }
+
+function 조건에_맞게_수열_변환하기_3(arr, k) {
+  return arr.map((val) => (k % 2 ? val * k : val + k));
+}
