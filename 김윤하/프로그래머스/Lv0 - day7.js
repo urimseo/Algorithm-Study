@@ -156,3 +156,11 @@ function 정수_부분(flo) {
   // Math.floor() 함수는 주어진 숫자와 같거나 작은 정수 중에서 가장 큰 수를 반환합니다.
   // Math.floor(-45.05); // -46
 }
+
+function 문자열_정수의_합(num_str) {
+  var answer = 0;
+  for (let i of num_str) {
+    answer += Number(i);
+  }
+  return answer;
+}
