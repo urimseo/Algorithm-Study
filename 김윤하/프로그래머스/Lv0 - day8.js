@@ -130,3 +130,18 @@ function solution2(arr) {
     ? 1
     : 0;
 }
+
+function 정사각형으로_만들기(arr) {
+  var row = arr.length;
+  var col = arr[0].length;
+  var answer = [...arr];
+  if (row > col) {
+    answer = arr.map((val) => [...val, ...Array(row - col).fill(0)]);
+  } else if (row < col) {
+    while (row < col) {
+      answer.push(Array(col).fill(0));
+      row++;
+    }
+  }
+  return answer;
+}
