@@ -31,3 +31,12 @@ function 자릿수_더하기(n) {
 function n의_배수_고르기(n, numlist) {
   return numlist.filter((num) => num % n === 0);
 }
+
+function 숫자_찾기(num, k) {
+  var idx = [...String(num)].map((val) => +val).indexOf(k);
+  return idx === -1 ? idx : idx + 1;
+
+  // return [...String(num)].map((val) => +val).indexOf(k) + 1 || -1
+  // 좌항이 -1을 리턴하면 +1로 인해 0이 되므로 0 || -1을 연산하면 -1 이 됨
+  // 즉 -1이라면 -1 나머지는 k의 인덱스 + 1이 됨
+}
