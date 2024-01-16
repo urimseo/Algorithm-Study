@@ -77,3 +77,15 @@ function 가장_큰_수_찾기(array) {
 function 편지(message) {
   return message.length * 2;
 }
+
+function 약수_구하기(n) {
+  var answer = [];
+  for (let i = 1; i <= n / 4 + 1; i++) {
+    if (n % i === 0) {
+      answer.push(i);
+      answer.push(n / i);
+    }
+  }
+  const set = new Set(answer);
+  return [...set].sort((a, b) => a - b);
+}
