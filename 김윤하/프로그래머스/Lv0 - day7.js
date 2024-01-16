@@ -164,3 +164,7 @@ function 문자열_정수의_합(num_str) {
   }
   return answer;
 }
+
+function 문자열을_정수로_변환하기(n_str) {
+  return +n_str;
+}
