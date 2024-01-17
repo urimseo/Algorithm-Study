@@ -147,3 +147,20 @@ function 대문자와_소문자(my_string) {
   }
   return answer;
 }
+
+function 암호_해독(cipher, code) {
+  var answer = '';
+  for (let i = 0; i < cipher.length; i++) {
+    (i + 1) % code === 0 ? (answer += cipher[i]) : null;
+  }
+  return answer;
+}
+
+function solution2(cipher, code) {
+  var answer = '';
+  // code 번째(code-1번 인덱스)부터 시작해서 i를 code만큼 증가시키기. 굳이 if 문 안 써도 됨!!
+  for (let i = code - 1; i < cipher.length; i += code) {
+    answer += cipher[i];
+  }
+  return answer;
+}
