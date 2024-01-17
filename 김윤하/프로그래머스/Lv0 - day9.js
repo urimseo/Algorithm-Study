@@ -164,3 +164,11 @@ function solution2(cipher, code) {
   }
   return answer;
 }
+
+function f_369게임(order) {
+  var answer = 0;
+  [...String(order)].map((val) =>
+    ['3', '6', '9'].includes(val) ? answer++ : null
+  );
+  return answer;
+}
