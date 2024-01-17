@@ -137,3 +137,13 @@ function 영어가_싫어요(numbers) {
 
   return +answer;
 }
+
+function 대문자와_소문자(my_string) {
+  var answer = '';
+  for (let str of my_string) {
+    str.toUpperCase() === str
+      ? (answer += str.toLowerCase())
+      : (answer += str.toUpperCase());
+  }
+  return answer;
+}
