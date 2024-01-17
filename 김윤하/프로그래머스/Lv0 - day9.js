@@ -116,3 +116,24 @@ function solution2(my_string, num1, num2) {
   [my_string[num1], my_string[num2]] = [my_string[num2], my_string[num1]];
   return my_string.join('');
 }
+
+function 영어가_싫어요(numbers) {
+  var answer = numbers;
+  var num_list = [
+    'zero',
+    'one',
+    'two',
+    'three',
+    'four',
+    'five',
+    'six',
+    'seven',
+    'eight',
+    'nine',
+  ];
+  for (let i = 0; i < 10; i++) {
+    answer = answer.replaceAll(num_list[i], String(i));
+  }
+
+  return +answer;
+}
