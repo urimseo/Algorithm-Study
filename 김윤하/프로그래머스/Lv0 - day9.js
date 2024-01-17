@@ -172,3 +172,10 @@ function f_369게임(order) {
   );
   return answer;
 }
+
+function 가까운_수(array, n) {
+  var arr = array.sort().map((val) => Math.abs(val - n));
+  var min = Math.min(...arr);
+  var min_idx = arr.indexOf(min);
+  return array[min_idx];
+}
